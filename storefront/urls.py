@@ -16,8 +16,10 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
+#playground/hello is the URL that will be used to access the say_hello view
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('playground/', include('playground.urls'))
 ]
